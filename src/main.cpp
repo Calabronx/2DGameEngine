@@ -1,8 +1,9 @@
 #include <iostream>
-#include "game.h"
+#include "application.h"
 
 int main(int argc,  char* argv[])
 {
-    Game game;
+    Engine::Application application;
+
     return 0;
 }

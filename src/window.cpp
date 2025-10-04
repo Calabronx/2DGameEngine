@@ -7,7 +7,7 @@ Window::Window()
     init();
 }
 
-void Window::initSurface()
+void Window::InitWindowSurface()
 {
     if (m_surface == nullptr) {
         m_surface = SDL_GetWindowSurface(m_window);
