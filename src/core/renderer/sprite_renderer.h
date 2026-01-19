@@ -6,6 +6,7 @@
 #include "renderer.h"
 
 namespace Renderer {
+	
 	class SpriteRenderer
 	{
 		public:

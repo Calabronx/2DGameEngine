@@ -32,7 +32,7 @@ namespace Renderer {
         int width, height, channels;
         std::string filepath = path.string();
 
-        stbi_set_flip_vertically_on_load(1);
+        // stbi_set_flip_vertically_on_load(true);
         unsigned char* data = stbi_load(filepath.c_str(), &width, &height, &channels, 0);
 
         if (!data)
@@ -59,6 +59,9 @@ namespace Renderer {
         glTextureParameteri(result.Handle, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
         glGenerateTextureMipmap(result.Handle);
+        
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         stbi_image_free(data);
 
@@ -78,7 +81,8 @@ namespace Renderer {
     void BlitFramebufferToSwapchain(const Framebuffer framebuffer)
     {
     }
-    void RenderSprite(Texture& texture, uint32_t shader,uint32_t vao, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color)
+    
+    void Render(Texture& texture, uint32_t shader,uint32_t vao, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color)
     {
         glUseProgram(shader);
         glm::mat4 model = glm::mat4(1.0f);

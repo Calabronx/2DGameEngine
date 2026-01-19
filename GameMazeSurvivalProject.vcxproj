@@ -156,18 +156,20 @@
   <ItemGroup>
     <ClCompile Include="..\OpenGL\include\glad\glad.c" />
     <ClCompile Include="..\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\core\resource_manager.cpp" />
     <ClCompile Include="src\core\renderer\sprite_renderer.cpp" />
     <ClCompile Include="src\core\game_object.cpp" />
     <ClCompile Include="src\core\renderer\shader.cpp" />
     <ClCompile Include="src\core\application.cpp" />
     <ClCompile Include="src\core\renderer\renderer.cpp" />
+    <ClCompile Include="src\core\tile_manager.cpp" />
     <ClCompile Include="src\core\window.cpp" />
-    <ClCompile Include="src\resource.cpp" />
     <ClCompile Include="src\core\renderer\sprite.cpp" />
     <ClCompile Include="src\core\renderer\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stb_image\stb_image.h" />
+    <ClInclude Include="src\core\resource_manager.h" />
     <ClInclude Include="src\core\renderer\sprite_renderer.h" />
     <ClInclude Include="src\core\game_object.h" />
     <ClInclude Include="src\core\renderer\shader.h" />
@@ -175,8 +177,9 @@
     <ClInclude Include="src\core\event.h" />
     <ClInclude Include="src\core\layer.h" />
     <ClInclude Include="src\core\renderer\renderer.h" />
+    <ClInclude Include="src\core\tile_manager.h" />
     <ClInclude Include="src\core\window.h" />
-    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\core\resource.h" />
     <ClInclude Include="src\core\renderer\sprite.h" />
     <ClInclude Include="src\core\renderer\texture.h" />
     <ClInclude Include="src\vector2.h" />

@@ -16,14 +16,19 @@
 
 #include <glm/glm.hpp>
 #include "renderer/renderer.h"
+#include "renderer/sprite_renderer.h"
 
 class GameObject
 {
 	public:
 		GameObject();
-		GameObject(glm::vec2 pos, glm::vec2 size, Renderer::Texture, uint32_t shader, glm::vec3 color = glm::vec3(1.0f), glm::vec2 velocity = glm::vec2(0.0f, 0.0f));
+		GameObject(glm::vec2 pos, glm::vec2 size, Renderer::Texture sprite, glm::vec3 color, glm::vec2 velocity);
+		GameObject(glm::vec2 pos, glm::vec2 size, Renderer::Texture sprite, glm::vec3 color);
 
-		virtual void RenderObject();
+
+		bool IsDestroyed() { return m_Destroyed; };
+
+		virtual void RenderObject(Renderer::SpriteRenderer& renderer);
 
 	private:
 		glm::vec2 m_Position;
@@ -35,8 +40,6 @@ class GameObject
 
 		bool m_Destroyed;
 		Renderer::Texture 	m_Sprite;
-		uint32_t 		  	m_VertexArray;
-		uint32_t 		  	m_Shader;
 
 };
 #endif

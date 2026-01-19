@@ -49,6 +49,6 @@ namespace Renderer {
 
     void SpriteRenderer::RenderSprite(Renderer::Texture& texture, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color)
     {
-    	 Renderer::RenderSprite(texture, m_Shader, m_VertexArray, glm::vec2(200.0f, 200.0f), glm::vec2(300.0f, 400.0f), rotate, glm::vec3(0.0f, 1.0f, 0.0f));
+    	 Renderer::Render(texture, m_Shader, m_VertexArray, position, size, rotate, color);
     }
 }

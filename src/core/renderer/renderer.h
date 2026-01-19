@@ -33,7 +33,7 @@ namespace Renderer {
     Framebuffer CreateFramebufferWithTexture(const Texture texture);
     bool AttachTextureToFramebuffer(Framebuffer& framebuffer, const Texture texture);
     void BlitFramebufferToSwapchain(const Framebuffer framebuffer);
-    void RenderSprite(Texture& texture, uint32_t shader, uint32_t vao, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color);
+    void Render(Texture& texture, uint32_t shader, uint32_t vao, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color);
 }
 
 #endif
